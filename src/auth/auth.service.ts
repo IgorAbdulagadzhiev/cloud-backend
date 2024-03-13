@@ -15,6 +15,7 @@ export class AuthService {
     const user = await this.usersService.findByEmail(email);
 
     if (user && user.password === password) {
+      // eslint-disable-next-line  @typescript-eslint/no-unused-vars
       const { password, ...result } = user;
       return result;
     }
